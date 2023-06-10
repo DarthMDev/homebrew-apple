@@ -54,6 +54,7 @@ class GamePortingToolkit < Formula
                   "gnutls",
                   "libusb",
                   "gettext",
+		  "molten-vk",
                   "openssl@1.1",
                   "sane-backends"]
   @@named_deps.each do |dep|
@@ -95,6 +96,8 @@ class GamePortingToolkit < Formula
                               "--disable-win16",
                               "--disable-tests",
                               "--without-x",
+			      "--with-sdl",
+			      "--with-vulkan",
                               "--without-pulse",
                               "--without-dbus",
                               "--without-inotify",
@@ -116,9 +119,6 @@ class GamePortingToolkit < Formula
                                 "--without-sane",
                                 "--without-krb5",
                                 "--disable-winedbg",
-                                "--without-vulkan",
-                                "--disable-vulkan_1",
-                                "--disable-winevulkan",
                                 "--without-openal",
                                 "--without-unwind",
                                 "--without-usb"]
